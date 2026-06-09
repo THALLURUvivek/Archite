@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to your STACKLY account to access your dashboard, manage projects, and collaborate with our design team on your architecture and interior design needs.">
+    <title>STACKLY | Login</title>
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-panel">
+            <div class="overlay"></div>
+            <div class="left-content">
+                <h1>STACKLY</h1>
+                <p>Architecture & Interior Design Studio</p>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-panel">
+
+            <div class="form-box">
+
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-home">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back To Home</span>
+    </a>
+
+    <h2>Welcome Back</h2>
+    <p class="subtitle">Login to your account</p>
+
+    <form id="loginForm">
+
+        <div class="input-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox"> Remember Me
+            </label>
+            <a href="broke.html">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+        <button type="button" class="admin-btn" onclick="adminLogin()">Admin Login</button>
+    </form>
+
+    <p class="signup-text">
+        Don't have an account?
+        <a href="signup.html">Create Account</a>
+    </p>
+</div>
+
+        </div>
+    </div>
+
+    <!-- Security Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"
+            integrity="sha512-2p4N/+Vhj/S5nSk1n8xWzBNHBvQ6q0qqqN7Zv5XpC0YYPdjPJcHPKGY9CKFbqRBnLlST4pHDT5rlgpBX5z3g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.11/purify.min.js"
+            integrity="sha512-ACXfvW2+FJmlDp5xWSFPUKPTYFnH8fVL9ViYvD9OTNH0pPJ8Y6d0N8d6xw5j33ZHVo7ZPk2V9xPyBjDe9JqB1A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+
+    <!-- Wait for libraries to load before initializing -->
+    <script>
+        window.addEventListener('load', function() {
+            // Check if libraries loaded
+            if (typeof bcrypt === 'undefined') {
+                console.error('bcrypt library failed to load');
+                alert('Security libraries failed to load. Please check your internet connection and refresh the page.');
+            }
+            if (typeof DOMPurify === 'undefined') {
+                console.error('DOMPurify library failed to load');
+            }
+        });
+    </script>
+
+    <script src="js/security-utils.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

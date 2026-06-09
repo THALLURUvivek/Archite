@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - The page you're looking for doesn't exist. Return to STACKLY homepage to explore our architecture and interior design services.">
+
+    <title>404 | Page Not Found</title>
+
+    <!-- Design System & Styles -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins',sans-serif;
+        }
+
+        body{
+
+            min-height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:
+            linear-gradient(
+            rgba(2,18,77,.92),
+            rgba(2,18,77,.92)
+            ),
+            url("https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=2000&fm=webp");
+
+            background-size:cover;
+            background-position:center;
+
+            color:white;
+
+            text-align:center;
+
+            padding:20px;
+        }
+
+        .error-container{
+
+            max-width:700px;
+        }
+
+        .error-code{
+
+            font-size:10rem;
+
+            font-weight:800;
+
+            color:#38bdf8;
+
+            line-height:1;
+        }
+
+        .error-title{
+
+            font-size:2.5rem;
+
+            margin:20px 0;
+        }
+
+        .error-text{
+
+            color:#cbd5e1;
+
+            line-height:1.8;
+
+            margin-bottom:40px;
+        }
+
+        .home-btn{
+
+            display:inline-block;
+
+            padding:15px 35px;
+
+            background:#38bdf8;
+
+            color:white;
+
+            text-decoration:none;
+
+            border-radius:50px;
+
+            font-weight:600;
+
+            transition:.3s;
+        }
+
+        .home-btn:hover{
+
+            transform:translateY(-5px);
+        }
+
+        .icon{
+
+            font-size:4rem;
+
+            margin-bottom:20px;
+
+            color:#38bdf8;
+        }
+        .button-group{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+        /* ===========================
+   MOBILE RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    body{
+
+        padding:15px;
+    }
+
+    .error-container{
+
+        width:100%;
+    }
+
+    .icon{
+
+        font-size:3rem;
+    }
+
+    .error-code{
+
+        font-size:6rem;
+    }
+
+    .error-title{
+
+        font-size:1.8rem;
+
+        margin:15px 0;
+    }
+
+    .error-text{
+
+        font-size:.95rem;
+
+        margin-bottom:30px;
+    }
+
+    .home-btn{
+
+        display:block;
+
+        width:100%;
+
+        max-width:300px;
+
+        margin:12px auto;
+
+        padding:14px 20px;
+
+        font-size:.95rem;
+    }
+}
+
+/* ===========================
+   SMALL MOBILE
+=========================== */
+
+@media(max-width:480px){
+
+    .error-code{
+
+        font-size:4.5rem;
+    }
+
+    .error-title{
+
+        font-size:1.5rem;
+    }
+
+    .error-text{
+
+        font-size:.9rem;
+
+        line-height:1.6;
+    }
+
+    .icon{
+
+        font-size:2.5rem;
+    }
+
+    .home-btn{
+
+        width:100%;
+
+        font-size:.9rem;
+
+        padding:12px 18px;
+    }
+}
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="error-container">
+
+        <div class="icon">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+        </div>
+
+        <h1 class="error-code">
+            404
+        </h1>
+
+        <h2 class="error-title">
+            Oops! Page Not Found
+        </h2>
+
+        <p class="error-text">
+
+            The page you're looking for doesn't exist,
+            has been moved, or is temporarily unavailable.
+
+        </p>
+        <div class="button-group">
+
+    <a href="index.html" class="home-btn">
+
+        <i class="fa-solid fa-house"></i>
+        Back To Home
+
+    </a>
+
+    <a href="#"
+       onclick="history.back(); return false;"
+       class="home-btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+        Back To Previous Page
+
+    </a>
+
+</div>
+
+
+    </div>
+
+</body>
+
+</html>

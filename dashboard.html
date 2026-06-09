@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access your STACKLY client dashboard to manage projects, view design proposals, track progress, and communicate with your design team.">
+
+    <title>STACKLY Dashboard</title>
+
+    <!-- Design System & Animations -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <style>
+            .profile-btn{
+
+    display:inline-flex;
+
+    justify-content:center;
+    align-items:center;
+
+    width:100%;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    text-decoration:none;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #38bdf8
+    );
+
+    color:white;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:.3s ease;
+
+    box-shadow:
+    0 10px 25px rgba(37,99,235,.25);
+}
+
+.profile-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.35);
+}
+        </style>
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <a href="index.html">
+                <img src="logo/logo-stackly.png" alt="logo">
+            </a>
+        </div>
+
+       <ul class="menu">
+
+    <li class="active">
+        <a href="#" onclick="showSection('dashboard')">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('projects')">
+            <i class="fa-solid fa-diagram-project"></i>
+            Projects
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('saved')">
+            <i class="fa-solid fa-heart"></i>
+            Saved Designs
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('messages')">
+            <i class="fa-solid fa-envelope"></i>
+            Messages
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('profile')">
+            <i class="fa-solid fa-user"></i>
+            Profile
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('settings')">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </a>
+    </li>
+    <li>
+
+</li>
+
+<li>
+    <a href="#" id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Logout
+    </a>
+</li>
+
+</ul>
+
+    </aside>
+
+    <!-- ================= MAIN CONTENT ================= -->
+<main class="main-content">
+
+    <!-- DASHBOARD -->
+
+    <section id="dashboard" class="dashboard-section active">
+
+        <section class="welcome-card">
+
+            <h1>Welcome Back 👋</h1>
+
+            <p>
+                Manage your architecture projects
+                and portfolio from one place.
+            </p>
+
+        </section>
+
+        <section class="stats">
+
+            <div class="stat-card">
+                <i class="fa-solid fa-building"></i>
+                <h2>48+</h2>
+                <p>Projects</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-users"></i>
+                <h2>120+</h2>
+                <p>Clients</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-award"></i>
+                <h2>18+</h2>
+                <p>Awards</p>
+            </div>
+
+            <div class="stat-card">
+                <i class="fa-solid fa-calendar"></i>
+                <h2>12+</h2>
+                <p>Years</p>
+            </div>
+
+        </section>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects" class="dashboard-section">
+
+        <h2>Projects Management</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+
+                <h3>Modern Villa</h3>
+
+                <p>Luxury Residential Design</p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Corporate Tower</h3>
+
+                <p>Commercial Building</p>
+
+            </div>
+
+            <div class="project-card">
+
+                <h3>Luxury Interior</h3>
+
+                <p>Interior Design</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- SAVED DESIGNS -->
+
+<section id="saved" class="dashboard-section">
+
+    <h2>Saved Designs Gallery</h2>
+
+    <div class="gallery-grid">
+
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&fm=webp" alt="Saved design - Modern residential villa architecture">
+
+        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&fm=webp" alt="Saved design - Contemporary commercial building">
+
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&fm=webp" alt="Saved design - Luxury interior decor">
+
+    </div>
+
+</section>
+
+    <!-- MESSAGES -->
+
+    <section id="messages" class="dashboard-section">
+
+        <h2>Messages</h2>
+
+        <div class="message-card">
+
+            <h4>John Doe</h4>
+
+            <p>
+                I need a consultation for my villa project.
+            </p>
+
+        </div>
+
+        <div class="message-card">
+
+            <h4>Rahul</h4>
+
+            <p>
+                Can you share the latest project updates?
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- PROFILE -->
+
+<section id="profile" class="dashboard-section">
+
+    <h2>User Profile</h2>
+
+    <div class="profile-card">
+
+        <div class="profile-header">
+
+            <img
+            src="https://i.pravatar.cc/200?img=12"
+            alt="Profile"
+            class="profile-img">
+
+            <h3 id="profileName">
+                STACKLY User
+            </h3>
+
+            <p>
+                Premium Member
+            </p>
+
+        </div>
+
+        <div class="profile-details">
+
+            <div class="profile-item">
+
+                <label>
+                    Full Name
+                </label>
+
+                <input
+                type="text"
+                id="userName"
+                value="STACKLY User">
+
+            </div>
+
+            <div class="profile-item">
+
+                <label>
+                    Email Address
+                </label>
+
+                <input
+                type="email"
+                id="userEmail"
+                value="admin@stackly.com">
+
+            </div>
+
+            <div class="profile-item">
+
+                <label>
+                    Phone Number
+                </label>
+
+                <input
+                type="tel"
+                value="+91 9876543210">
+
+            </div>
+
+            <div class="profile-item">
+
+                <label>
+                    Location
+                </label>
+
+                <input
+                type="text"
+                value="Bangalore, India">
+
+            </div>
+<a href="broke.html" class="profile-btn">
+
+    <i class="fa-solid fa-pen-to-square"></i> Update Profile
+
+</a>
+        
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- PROFILE -->
+
+    
+
+    <!-- SETTINGS -->
+<section id="settings" class="dashboard-section">
+
+    <h2>Account Settings</h2>
+
+    <div class="settings-card">
+
+        <div class="setting-item">
+
+            <label>Full Name</label>
+
+            <input
+            type="text"
+            value="STACKLY User">
+
+        </div>
+
+        <div class="setting-item">
+
+            <label>Email Address</label>
+
+            <input
+            type="email"
+            value="admin@stackly.com">
+
+        </div>
+
+        <div class="setting-item">
+
+            <label>Theme</label>
+
+            <select>
+
+                <option>Light Mode</option>
+
+                <option>Dark Mode</option>
+
+            </select>
+
+        </div>
+
+        <button class="save-btn">
+
+            Save Changes
+
+        </button>
+
+    </div>
+
+</section>
+</main>
+<script>
+
+  
+
+function showSection(sectionId){
+
+    document
+    .querySelectorAll('.dashboard-section')
+    .forEach(section => {
+
+        section.classList.remove('active');
+
+    });
+
+    document
+    .getElementById(sectionId)
+    .classList.add('active');
+}
+
+// Logout
+
+document
+.getElementById('logoutBtn')
+.addEventListener('click',function(){
+
+    window.location.href='login.html';
+
+});
+
+
+
+
+
+</script>
+
+<script>
+
+function updateProfile(){
+
+    const name =
+    document.getElementById(
+        "userName"
+    ).value;
+
+    const email =
+    document.getElementById(
+        "userEmail"
+    ).value;
+
+    document.getElementById(
+        "profileName"
+    ).innerText = name;
+
+    localStorage.setItem(
+        "userName",
+        name
+    );
+
+    localStorage.setItem(
+        "userEmail",
+        email
+    );
+
+    alert(
+        "Profile Updated Successfully!"
+    );
+}
+
+// Load Saved Data
+
+window.addEventListener(
+    "load",
+    ()=>{
+
+        const savedName =
+        localStorage.getItem(
+            "userName"
+        );
+
+        const savedEmail =
+        localStorage.getItem(
+            "userEmail"
+        );
+
+        if(savedName){
+
+            document.getElementById(
+                "userName"
+            ).value =
+            savedName;
+
+            document.getElementById(
+                "profileName"
+            ).innerText =
+            savedName;
+        }
+
+        if(savedEmail){
+
+            document.getElementById(
+                "userEmail"
+            ).value =
+            savedEmail;
+        }
+
+    }
+);
+
+</script>
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

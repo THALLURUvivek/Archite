@@ -1,0 +1,328 @@
+/**
+ * STACKLY Responsive Design System
+ * Standardized breakpoints and mobile-first utilities
+ */
+
+/* ===========================
+   BREAKPOINT SYSTEM
+   =========================== */
+
+/*
+  Mobile First Approach:
+  - Base styles: Mobile (0-479px)
+  - Small: 480px+ (Mobile landscape)
+  - Medium: 768px+ (Tablets)
+  - Large: 992px+ (Small desktops)
+  - XL: 1200px+ (Large desktops)
+*/
+
+/* ===========================
+   RESPONSIVE UTILITIES
+   =========================== */
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg, 2rem);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-md, 1.5rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--space-sm, 1rem);
+  }
+}
+
+/* Responsive Grid */
+.grid-responsive {
+  display: grid;
+  gap: var(--space-lg, 2rem);
+}
+
+/* 1 Column (Mobile) */
+@media (max-width: 767px) {
+  .grid-responsive {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 2 Columns (Tablet) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3+ Columns (Desktop) */
+@media (min-width: 992px) {
+  .grid-responsive {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+/* ===========================
+   RESPONSIVE TEXT
+   =========================== */
+
+/* Fluid Typography */
+.text-responsive {
+  font-size: clamp(0.95rem, 1vw + 0.5rem, 1.125rem);
+}
+
+h1.responsive {
+  font-size: clamp(2rem, 5vw + 1rem, 4.5rem);
+}
+
+h2.responsive {
+  font-size: clamp(1.75rem, 4vw + 0.5rem, 3.5rem);
+}
+
+h3.responsive {
+  font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+}
+
+/* ===========================
+   VISIBILITY UTILITIES
+   =========================== */
+
+/* Hide on Mobile */
+@media (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Hide on Tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+/* Hide on Desktop */
+@media (min-width: 992px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Show only on Mobile */
+@media (min-width: 768px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
+
+/* Show only on Tablet */
+.show-tablet-only {
+  display: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .show-tablet-only {
+    display: block !important;
+  }
+}
+
+/* Show only on Desktop */
+.show-desktop-only {
+  display: none !important;
+}
+
+@media (min-width: 992px) {
+  .show-desktop-only {
+    display: block !important;
+  }
+}
+
+/* ===========================
+   RESPONSIVE SPACING
+   =========================== */
+
+/* Section Padding */
+section.responsive-section {
+  padding: clamp(60px, 10vw, 120px) clamp(5%, 2vw, 8%);
+}
+
+/* ===========================
+   RESPONSIVE NAVIGATION
+   =========================== */
+
+/* Navbar responsive styles moved to css/style.css for consistency.
+   The global navbar uses .nav-menu as the sliding container with .nav-links inside.
+   Mobile menu functionality handled by js/mobile-menu.js */
+
+/* ===========================
+   RESPONSIVE CARDS
+   =========================== */
+
+@media (max-width: 768px) {
+  .service-card,
+  .team-card,
+  .project-card {
+    margin-bottom: var(--space-md, 1.5rem);
+  }
+}
+
+/* ===========================
+   RESPONSIVE BUTTONS
+   =========================== */
+
+/* Touch-Friendly Buttons on Mobile */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  button,
+  a[role="button"] {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 14px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===========================
+   RESPONSIVE IMAGES
+   =========================== */
+
+img.responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Image Grid */
+.image-grid-responsive {
+  display: grid;
+  gap: var(--space-md, 1.5rem);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .image-grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .image-grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ===========================
+   RESPONSIVE FORMS
+   =========================== */
+
+@media (max-width: 768px) {
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .input-group {
+    margin-bottom: var(--space-md, 1.5rem);
+  }
+}
+
+/* ===========================
+   RESPONSIVE TABLES
+   =========================== */
+
+@media (max-width: 768px) {
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
+
+/* ===========================
+   RESPONSIVE DASHBOARD
+   =========================== */
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   TOUCH INTERACTIONS
+   =========================== */
+
+/* Remove hover effects on touch devices */
+@media (hover: none) {
+  .hover-lift:hover,
+  .hover-scale:hover,
+  .hover-glow:hover {
+    transform: none;
+    box-shadow: initial;
+  }
+
+  /* Add tap effects instead */
+  .hover-lift:active,
+  .hover-scale:active {
+    transform: scale(0.98);
+  }
+}
+
+/* ===========================
+   PRINT STYLES
+   =========================== */
+
+@media print {
+  .navbar,
+  .sidebar,
+  .menu-btn,
+  .floating-buttons,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}

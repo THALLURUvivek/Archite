@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configure your STACKLY account settings, manage notifications, security preferences, and customize your dashboard experience.">
+    <title>STACKLY | Settings</title>
+
+    <!-- Design System & Styles -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <style>
+            /* ==========================
+   GOOGLE FONT
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    display:flex;
+    min-height:100vh;
+}
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.sidebar{
+    width:270px;
+    height:100vh;
+
+    background:#0f172a;
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    padding:30px 20px;
+}
+
+.logo{
+    color:white;
+    font-size:1.8rem;
+    font-weight:700;
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.menu{
+    list-style:none;
+}
+
+.menu li{
+    margin-bottom:12px;
+}
+
+.menu li a{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    text-decoration:none;
+
+    color:#cbd5e1;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:.3s;
+}
+
+.menu li a:hover{
+    background:#1e293b;
+    color:white;
+}
+
+.menu li.active a{
+    background:#2563eb;
+    color:white;
+}
+
+.menu li i{
+    font-size:1rem;
+}
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+.main-content{
+    flex:1;
+
+    margin-left:270px;
+
+    padding:40px;
+}
+
+/* ==========================
+   WELCOME CARD
+========================== */
+
+.welcome-card{
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    color:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    margin-bottom:30px;
+
+    box-shadow:
+    0 15px 35px rgba(37,99,235,.25);
+}
+
+.welcome-card h1{
+    font-size:2.2rem;
+    margin-bottom:10px;
+}
+
+.welcome-card p{
+    opacity:.9;
+}
+
+/* ==========================
+   PROFILE CARD
+========================== */
+
+.profile-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+}
+
+.profile-card h2{
+    color:#0f172a;
+    margin-bottom:25px;
+}
+
+/* ==========================
+   PROFILE INFO
+========================== */
+
+.profile-info{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.profile-info p{
+
+    background:#f8fafc;
+
+    padding:16px 20px;
+
+    border-radius:12px;
+
+    color:#475569;
+
+    font-size:1rem;
+}
+
+.profile-info strong{
+    color:#0f172a;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+.login-btn{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.3s;
+
+    margin-top:10px;
+}
+
+.login-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 20px rgba(37,99,235,.25);
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .sidebar{
+        width:220px;
+    }
+
+    .main-content{
+        margin-left:220px;
+    }
+}
+
+@media(max-width:768px){
+
+    .sidebar{
+        display:none;
+    }
+
+    .main-content{
+        margin-left:0;
+        padding:20px;
+    }
+
+    .welcome-card h1{
+        font-size:1.8rem;
+    }
+
+    .profile-card{
+        padding:20px;
+    }
+}
+        </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            STACKLY
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    <i class="fa-solid fa-user"></i>
+                    Profile
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <main class="main-content">
+
+        <section class="welcome-card">
+
+            <h1>Settings ⚙️</h1>
+
+            <p>
+                Customize your STACKLY experience.
+            </p>
+
+        </section>
+
+        <section class="profile-card">
+
+            <h2>Preferences</h2>
+
+            <div class="profile-info">
+
+                <p>
+                    Theme:
+                    <strong>Light Mode</strong>
+                </p>
+
+                <p>
+                    Notifications:
+                    <strong>Enabled</strong>
+                </p>
+
+                <button class="login-btn">
+                    Save Settings
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

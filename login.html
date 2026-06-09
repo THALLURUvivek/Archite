@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to your STACKLY account to access your dashboard, manage projects, and collaborate with our design team on your architecture and interior design needs.">
+    <title>STACKLY | Login</title>
+
+    <!-- Design System -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="auth-container">
+
+        <!-- LEFT SIDE -->
+        <div class="left-panel">
+            <div class="overlay"></div>
+            <div class="left-content">
+                <h1>STACKLY</h1>
+                <p>Architecture & Interior Design Studio</p>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="right-panel">
+
+            <div class="form-box">
+
+    <!-- BACK TO HOME BUTTON -->
+    <a href="index.html" class="back-home">
+        <i class="fa-solid fa-arrow-left"></i>
+        <span>Back To Home</span>
+    </a>
+
+    <h2>Welcome Back</h2>
+    <p class="subtitle">Login to your account</p>
+
+    <form id="loginForm">
+
+        <div class="input-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email Address" required>
+        </div>
+
+        <div class="input-group">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+
+        <div class="options">
+            <label>
+                <input type="checkbox"> Remember Me
+            </label>
+            <a href="broke.html">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="login-btn">Login</button>
+        <button type="button" class="admin-btn" onclick="adminLogin()">Admin Login</button>
+    </form>
+
+    <p class="signup-text">
+        Don't have an account?
+        <a href="signup.html">Create Account</a>
+    </p>
+</div>
+
+        </div>
+    </div>
+
+    <!-- Built-in Crypto Utilities (No CDN required - works offline) -->
+    <script src="js/crypto-utils.js"></script>
+    <script src="js/auth-new.js"></script>
+</body>
+</html>

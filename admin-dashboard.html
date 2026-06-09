@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="STACKLY Admin Dashboard - Manage projects, clients, team members, and oversee all architecture and interior design operations from a centralized platform.">
+    <title>STACKLY | Admin Dashboard</title>
+    <!-- Design System & Animations -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/admin-enhancements.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="logo">
+
+           
+
+            <img src="logo/logo-stackly.png">
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="#" class="menu-link active" data-section="dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="users">
+                    <i class="fa-solid fa-users"></i>
+                    User Management
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="projects">
+                    <i class="fa-solid fa-building"></i>
+                    Projects
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="menu-link" data-section="analytics">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Analytics
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+
+        <header class="topbar">
+
+            <button class="menu-toggle" id="menuToggle">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <div class="topbar-title">
+
+                <h2>
+                    Admin Dashboard
+                </h2>
+
+                <p>
+                    Welcome back, Administrator
+                </p>
+
+            </div>
+
+            <div class="notification">
+
+    <i class="fa-solid fa-bell"></i>
+
+    <span class="notification-count">
+        5
+    </span>
+
+</div>
+<button id="themeToggle">
+
+    🌙
+
+</button>
+
+            <div class="admin-profile">
+
+                <img
+                    src="https://i.pravatar.cc/150?img=12"
+                    alt="Admin">
+
+                <span>
+                    Admin
+                </span>
+
+            </div>
+
+        </header>
+
+        <!-- DASHBOARD SECTION -->
+        <div id="dashboard-section" class="content-section active">
+
+        <!-- STATS -->
+
+        <section class="stats-grid" id="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="icon-box users">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>245</h3>
+
+                    <p>Total Users</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon-box projects">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>86</h3>
+
+                    <p>Total Projects</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon-box bookings">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>32</h3>
+
+                    <p>Active Bookings</p>
+
+                </div>
+
+            </div>
+
+            <div class="stat-card">
+
+                <div class="icon-box revenue">
+
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>₹4.5L</h3>
+
+                    <p>Revenue</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CHART + BOOKINGS -->
+
+        <section class="content-grid">
+
+            <div class="chart-card">
+
+                <h3>
+                    Revenue Analytics
+                </h3>
+<canvas id="revenueChart"></canvas>
+            </div>
+
+            <div class="booking-card">
+
+                <h3>
+                    Recent Bookings
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Vivek - Pending
+                    </li>
+
+                    <li>
+                        Rahul - Approved
+                    </li>
+
+                    <li>
+                        Praveen - Completed
+                    </li>
+
+                    <li>
+                        Suresh - Pending
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <!-- USERS TABLE -->
+
+        <section class="table-card">
+
+            <div class="table-header">
+
+                <h3>
+                    Recent Users
+                </h3>
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Joined</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>Vivek</td>
+
+                            <td>vivek@gmail.com</td>
+
+                            <td>01 Jun 2026</td>
+
+                            <td>
+                                Active
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Rahul</td>
+
+                            <td>rahul@gmail.com</td>
+
+                            <td>02 Jun 2026</td>
+
+                            <td>
+                                Active
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>Praveen</td>
+
+                            <td>praveen@gmail.com</td>
+
+                            <td>03 Jun 2026</td>
+
+                            <td>
+                                Active
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        </div>
+        <!-- END DASHBOARD SECTION -->
+
+        <!-- USER MANAGEMENT SECTION -->
+        <div id="users-section" class="content-section">
+
+            <div class="section-header">
+                <h2><i class="fa-solid fa-users"></i> User Management</h2>
+                <div class="header-actions">
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="text" id="userSearch" placeholder="Search users...">
+                    </div>
+                    <button class="btn primary-btn" id="exportUsersBtn">
+                        <i class="fa-solid fa-download"></i> Export CSV
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <div class="table-responsive">
+                    <table id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Joined Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersTableBody">
+                            <!-- Populated by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <!-- END USER MANAGEMENT SECTION -->
+
+        <!-- PROJECTS SECTION -->
+        <div id="projects-section" class="content-section">
+
+            <div class="section-header">
+                <h2><i class="fa-solid fa-building"></i> Project Management</h2>
+                <div class="header-actions">
+                    <button class="btn primary-btn" id="addProjectBtn">
+                        <i class="fa-solid fa-plus"></i> Add Project
+                    </button>
+                </div>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Populated by JavaScript -->
+            </div>
+
+        </div>
+        <!-- END PROJECTS SECTION -->
+
+        <!-- ANALYTICS SECTION -->
+        <div id="analytics-section" class="content-section">
+
+            <div class="section-header">
+                <h2><i class="fa-solid fa-chart-line"></i> Advanced Analytics</h2>
+            </div>
+
+            <div class="analytics-grid">
+                <div class="chart-card">
+                    <h3>User Growth</h3>
+                    <canvas id="userGrowthChart"></canvas>
+                </div>
+
+                <div class="chart-card">
+                    <h3>Project Status</h3>
+                    <canvas id="projectStatusChart"></canvas>
+                </div>
+
+                <div class="chart-card full-width">
+                    <h3>Monthly Revenue Trend</h3>
+                    <canvas id="revenueChartAdvanced"></canvas>
+                </div>
+            </div>
+
+        </div>
+        <!-- END ANALYTICS SECTION -->
+
+    </main>
+
+    <!-- MODALS -->
+
+    <!-- Edit User Modal -->
+    <div id="editUserModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit User</h3>
+                <button class="close-modal" onclick="closeModal('editUserModal')">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="editUserForm">
+                    <input type="hidden" id="editUserEmail">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="editUserName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email (Read-only)</label>
+                        <input type="email" id="editUserEmailDisplay" readonly>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn secondary-btn" onclick="closeModal('editUserModal')">Cancel</button>
+                        <button type="submit" class="btn primary-btn">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Project Modal -->
+    <div id="addProjectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Project</h3>
+                <button class="close-modal" onclick="closeModal('addProjectModal')">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addProjectForm">
+                    <div class="form-group">
+                        <label>Project Name</label>
+                        <input type="text" id="projectName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Client Name</label>
+                        <input type="text" id="projectClient" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="projectCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="Residential">Residential</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Interior">Interior</option>
+                            <option value="Luxury Villa">Luxury Villa</option>
+                            <option value="Hospitality">Hospitality</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="projectStatus" required>
+                            <option value="Planning">Planning</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Completed">Completed</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Budget (₹)</label>
+                        <input type="number" id="projectBudget" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn secondary-btn" onclick="closeModal('addProjectModal')">Cancel</button>
+                        <button type="submit" class="btn primary-btn">Add Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // =========================
+// MOBILE SIDEBAR TOGGLE
+// =========================
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const sidebar =
+document.getElementById("sidebar");
+
+menuToggle.addEventListener(
+    "click",
+    () => {
+
+        sidebar.classList.toggle(
+            "active"
+        );
+
+    }
+);
+
+// =========================
+// CLOSE SIDEBAR WHEN
+// CLICKING OUTSIDE
+// =========================
+
+document.addEventListener(
+    "click",
+    (e) => {
+
+        if (
+            !sidebar.contains(e.target) &&
+            !menuToggle.contains(e.target)
+        ) {
+
+            sidebar.classList.remove(
+                "active"
+            );
+
+        }
+
+    }
+);
+
+// =========================
+// SECTION SWITCHING
+// =========================
+
+const menuLinks =
+document.querySelectorAll(
+    ".menu-link"
+);
+
+const sections =
+document.querySelectorAll(
+    ".content-section"
+);
+
+menuLinks.forEach(
+    link => {
+
+        link.addEventListener(
+            "click",
+            (e) => {
+
+                e.preventDefault();
+
+                // Remove active from all links
+                menuLinks.forEach(
+                    l => l.classList.remove("active")
+                );
+
+                // Add active to clicked link
+                link.classList.add("active");
+
+                // Hide all sections
+                sections.forEach(
+                    s => s.classList.remove("active")
+                );
+
+                // Show selected section
+                const sectionId = link.getAttribute("data-section");
+                const targetSection = document.getElementById(
+                    sectionId + "-section"
+                );
+
+                if (targetSection) {
+                    targetSection.classList.add("active");
+                }
+
+                // Close sidebar on mobile
+                if (window.innerWidth <= 992) {
+                    sidebar.classList.remove("active");
+                }
+
+            }
+        );
+
+    }
+);
+
+// =========================
+// SIMPLE COUNTER ANIMATION
+// =========================
+
+const stats =
+document.querySelectorAll(
+    ".stat-card h3"
+);
+
+stats.forEach(
+    stat => {
+
+        const target =
+        stat.innerText
+        .replace(/[^\d]/g, "");
+
+        if(target){
+
+            let count = 0;
+
+            const update = () => {
+
+                count += Math.ceil(
+                    target / 50
+                );
+
+                if(
+                    count >= target
+                ){
+
+                    stat.innerText =
+                    stat.innerText.includes("₹")
+                    ? "₹4.5L"
+                    : target;
+
+                }else{
+
+                    stat.innerText =
+                    count;
+
+                    requestAnimationFrame(
+                        update
+                    );
+                }
+            };
+
+            update();
+        }
+
+    }
+);
+
+document
+.getElementById("logoutBtn")
+.addEventListener("click", () => {
+
+    if(confirm("Are you sure you want to logout?")){
+
+        localStorage.clear();
+
+        window.location.href =
+        "login.html";
+    }
+
+});
+
+
+
+
+
+
+
+    </script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Admin Dashboard Scripts -->
+    <script src="js/admin-analytics.js"></script>
+    <script src="js/admin-users.js"></script>
+    <script src="js/admin-projects.js"></script>
+
+
+
+</body>
+</html>
