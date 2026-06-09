@@ -606,6 +606,49 @@ section{
         height: 70px;
     }
 }
+
+.stats-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.stats-heading h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color:yellow;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.stats-heading h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #d4a017;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+.stats-heading p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 700px;
+    margin: 15px auto 0;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    .stats-heading h2 {
+        font-size: 2rem;
+    }
+
+    .stats-heading p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
 .about{
     display:grid;
     grid-template-columns:1fr 1fr;

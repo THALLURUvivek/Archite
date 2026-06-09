@@ -1049,3 +1049,80 @@ body{
         padding:25px;
     }
 }
+
+
+
+/* ===========================
+   MOBILE RESPONSIVE FIX
+=========================== */
+
+@media (max-width: 768px) {
+
+    .sidebar{
+        position: relative;
+        width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .main-content{
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .welcome-card{
+        padding: 25px;
+        border-radius: 15px;
+    }
+
+    .welcome-card h1{
+        font-size: 1.8rem;
+    }
+
+    .welcome-card p{
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .menu li a{
+        padding: 12px;
+        font-size: 14px;
+    }
+
+}
+
+/* Extra Small Phones */
+
+@media (max-width: 480px) {
+
+    .sidebar{
+        padding: 15px;
+    }
+
+    .main-content{
+        padding: 10px;
+    }
+
+    .welcome-card{
+        padding: 20px;
+    }
+
+    .welcome-card h1{
+        font-size: 1.5rem;
+    }
+
+    .welcome-card p{
+        font-size: 0.9rem;
+    }
+
+    .menu li a{
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .menu i{
+        font-size: 1rem;
+    }
+
+}

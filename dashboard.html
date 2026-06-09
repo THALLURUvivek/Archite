@@ -67,71 +67,77 @@
 
     <!-- ================= SIDEBAR ================= -->
 
-    <aside class="sidebar">
+<aside class="sidebar">
 
-        <div class="logo">
-            <a href="index.html">
-                <img src="logo/logo-stackly.png" alt="logo">
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo/logo-stackly.png" alt="logo">
+        </a>
+    </div>
+
+    <ul class="menu">
+
+        <li class="active">
+            <a href="#" onclick="showSection('dashboard')">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
             </a>
-        </div>
+        </li>
 
-       <ul class="menu">
+        <li>
+            <a href="#" onclick="showSection('projects')">
+                <i class="fa-solid fa-diagram-project"></i>
+                Projects
+            </a>
+        </li>
 
-    <li class="active">
-        <a href="#" onclick="showSection('dashboard')">
-            <i class="fa-solid fa-house"></i>
-            Dashboard
-        </a>
-    </li>
+        <li>
+            <a href="#" onclick="showSection('saved')">
+                <i class="fa-solid fa-heart"></i>
+                Saved Designs
+            </a>
+        </li>
 
-    <li>
-        <a href="#" onclick="showSection('projects')">
-            <i class="fa-solid fa-diagram-project"></i>
-            Projects
-        </a>
-    </li>
+        <li>
+            <a href="#" onclick="showSection('messages')">
+                <i class="fa-solid fa-envelope"></i>
+                Messages
+            </a>
+        </li>
 
-    <li>
-        <a href="#" onclick="showSection('saved')">
-            <i class="fa-solid fa-heart"></i>
-            Saved Designs
-        </a>
-    </li>
+        <li>
+            <a href="#" onclick="showSection('profile')">
+                <i class="fa-solid fa-user"></i>
+                Profile
+            </a>
+        </li>
 
-    <li>
-        <a href="#" onclick="showSection('messages')">
-            <i class="fa-solid fa-envelope"></i>
-            Messages
-        </a>
-    </li>
+        <li>
+            <a href="#" onclick="showSection('settings')">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </a>
+        </li>
 
-    <li>
-        <a href="#" onclick="showSection('profile')">
-            <i class="fa-solid fa-user"></i>
-            Profile
-        </a>
-    </li>
+        <!-- Back to Home -->
+        <li>
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Home
+            </a>
+        </li>
 
-    <li>
-        <a href="#" onclick="showSection('settings')">
-            <i class="fa-solid fa-gear"></i>
-            Settings
-        </a>
-    </li>
-    <li>
+        <!-- Logout -->
+        <li>
+            <a href="#" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </a>
+        </li>
 
-</li>
+    </ul>
 
-<li>
-    <a href="#" id="logoutBtn">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        Logout
-    </a>
-</li>
-
-</ul>
-
-    </aside>
+</aside>
 
     <!-- ================= MAIN CONTENT ================= -->
 <main class="main-content">
